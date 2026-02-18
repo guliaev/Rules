@@ -34,6 +34,7 @@ PROCESS-NAME,LookupViewService
 PROCESS-NAME,TV
 
 DOMAIN-SUFFIX,lookup-api.apple.com
+DOMAIN-SUFFIX,stats.gc.apple.com
 DOMAIN,apple.comscoreresearch.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,akadns.net
