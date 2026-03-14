@@ -1,0 +1,24 @@
+# Copilot.list — для Shadowrocket / репо rz6agx/iOS-Rule
+# Источники:
+#   - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/Copilot
+#   - Azure IP Ranges & Service Tags JSON (Microsoft)
+#   - Netify — Copilot domains и IPs
+# Дата обновления: 2025-11-19
+
+# --- Доменные суффиксы ---
+DOMAIN-SUFFIX,api.microsoftapp.net
+DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
+
+# --- Точные домены ---
+DOMAIN,api.msn.com
+DOMAIN,assets.msn.com
+DOMAIN,copilot.microsoft.com
+DOMAIN,gateway.bingviz.microsoft.net
+DOMAIN,gateway.bingviz.microsoftapp.net
+DOMAIN,in.appcenter.ms
+DOMAIN,location.microsoft.com
+DOMAIN,odc.officeapps.live.com
+DOMAIN,r.bing.com
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,services.bingapis.com
+DOMAIN,www.bing.com
