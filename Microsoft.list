@@ -2,13 +2,9 @@
 # AUTHOR: blackmatrix7 (adapted for guliaev/Rules)
 # SOURCE: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/Microsoft
 # Дата обновления: 2026-03-14
-# Примечание: удалены домены, уже присутствующие в Xbox.list и OneDrive.list
-# TOTAL: 653
+# Примечание: удалены домены Xbox.list, OneDrive.list и Azure.list
 
 DOMAIN,vsmarketplacebadge.apphb.com
-DOMAIN-SUFFIX,21vbc.com
-DOMAIN-SUFFIX,21vbluecloud.com
-DOMAIN-SUFFIX,21vbluecloud.net
 DOMAIN-SUFFIX,a-msedge.net
 DOMAIN-SUFFIX,a1158.g.akamai.net
 DOMAIN-SUFFIX,a122.dscg3.akamai.net
@@ -24,44 +20,14 @@ DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,ankarazirvesi2018.com
 DOMAIN-SUFFIX,api-extractor.com
-DOMAIN-SUFFIX,apihub-internal.cn
 DOMAIN-SUFFIX,apisof.net
 DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,applicationinsights.io
 DOMAIN-SUFFIX,applicationinsights.net
-DOMAIN-SUFFIX,appserviceenvironment.cn
 DOMAIN-SUFFIX,aria.ms
 DOMAIN-SUFFIX,asp.net
 DOMAIN-SUFFIX,aspnetcdn.com
 DOMAIN-SUFFIX,assets-yammer.com
-DOMAIN-SUFFIX,azcrmc-test.cn
-DOMAIN-SUFFIX,azcrmc.cn
-DOMAIN-SUFFIX,azk8s.cn
-DOMAIN-SUFFIX,aznbcontent.cn
-DOMAIN-SUFFIX,aztask.cn
-DOMAIN-SUFFIX,azure
-DOMAIN-SUFFIX,azure-api.cn
-DOMAIN-SUFFIX,azure-apihub.cn
-DOMAIN-SUFFIX,azure-apim.net
-DOMAIN-SUFFIX,azure-automation.cn
-DOMAIN-SUFFIX,azure-devices.cn
-DOMAIN-SUFFIX,azure-devices.net
-DOMAIN-SUFFIX,azure-dns.com
-DOMAIN-SUFFIX,azure-mobile.net
-DOMAIN-SUFFIX,azure.com
-DOMAIN-SUFFIX,azure.net
-DOMAIN-SUFFIX,azurecomcdn.net
-DOMAIN-SUFFIX,azurecomm.net
-DOMAIN-SUFFIX,azurecontainer.io
-DOMAIN-SUFFIX,azurecosmosdb.com
-DOMAIN-SUFFIX,azurecr.cn
-DOMAIN-SUFFIX,azuredatabricks.net
-DOMAIN-SUFFIX,azureedge.net
-DOMAIN-SUFFIX,azurefd.net
-DOMAIN-SUFFIX,azureiotcentral.com
-DOMAIN-SUFFIX,azureiotsolutions.com
-DOMAIN-SUFFIX,azurerms.com
-DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,b.akamaiedge.net
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.com.cn
@@ -172,7 +138,6 @@ DOMAIN-SUFFIX,virtualearth.net
 DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,vscode.dev
 DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,windowsazure.com
 DOMAIN-SUFFIX,windowsupdate.com
 DOMAIN-SUFFIX,wunderlist.com
