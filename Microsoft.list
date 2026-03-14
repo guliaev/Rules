@@ -2,11 +2,10 @@
 # AUTHOR: blackmatrix7 (adapted for guliaev/Rules)
 # SOURCE: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/Microsoft
 # Дата обновления: 2026-03-14
-# Примечание: удалены домены, уже присутствующие в Xbox.list
-# TOTAL: 661
+# Примечание: удалены домены, уже присутствующие в Xbox.list и OneDrive.list
+# TOTAL: 653
 
 DOMAIN,vsmarketplacebadge.apphb.com
-DOMAIN-SUFFIX,1drv.ms
 DOMAIN-SUFFIX,21vbc.com
 DOMAIN-SUFFIX,21vbluecloud.com
 DOMAIN-SUFFIX,21vbluecloud.net
@@ -142,8 +141,6 @@ DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,office.net
 DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,officeppe.net
-DOMAIN-SUFFIX,onedrive.com
-DOMAIN-SUFFIX,onedrive.net
 DOMAIN-SUFFIX,onenote.com
 DOMAIN-SUFFIX,onenote.net
 DOMAIN-SUFFIX,onestore.ms
@@ -159,8 +156,6 @@ DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,s-msedge.net
 DOMAIN-SUFFIX,sfbassets.com
 DOMAIN-SUFFIX,sfx.ms
-DOMAIN-SUFFIX,sharepoint.com
-DOMAIN-SUFFIX,sharepointonline.com
 DOMAIN-SUFFIX,signalr.net
 DOMAIN-SUFFIX,skype.com
 DOMAIN-SUFFIX,skypeassets.com
@@ -184,9 +179,6 @@ DOMAIN-SUFFIX,wunderlist.com
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN-KEYWORD,microsoft
-DOMAIN-KEYWORD,1drv
-DOMAIN-KEYWORD,onedrive
-DOMAIN-KEYWORD,skydrive
 USER-AGENT,Microsoft*
 USER-AGENT,OneDrive*
 USER-AGENT,OneDriveiOSApp*
