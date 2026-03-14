@@ -2,7 +2,8 @@
 # AUTHOR: blackmatrix7 (adapted for guliaev/Rules)
 # SOURCE: https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/Microsoft
 # Дата обновления: 2026-03-14
-# TOTAL: 671
+# Примечание: удалены домены, уже присутствующие в Xbox.list
+# TOTAL: 661
 
 DOMAIN,vsmarketplacebadge.apphb.com
 DOMAIN-SUFFIX,1drv.ms
@@ -86,7 +87,6 @@ DOMAIN-SUFFIX,dynamics.com
 DOMAIN-SUFFIX,edgesuite.net
 DOMAIN-SUFFIX,flipwithsurface.com
 DOMAIN-SUFFIX,g.akamaiedge.net
-DOMAIN-SUFFIX,gamepass.com
 DOMAIN-SUFFIX,gfx.ms
 DOMAIN-SUFFIX,groupme.com
 DOMAIN-SUFFIX,helpshift.com
@@ -119,8 +119,6 @@ DOMAIN-SUFFIX,microsoftstream.com
 DOMAIN-SUFFIX,microsoftteams.com
 DOMAIN-SUFFIX,microsofttranslator.com
 DOMAIN-SUFFIX,microsoftusercontent.com
-DOMAIN-SUFFIX,minecraft.net
-DOMAIN-SUFFIX,mojang.com
 DOMAIN-SUFFIX,msappproxy.net
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,msauthimages.net
@@ -157,7 +155,6 @@ DOMAIN-SUFFIX,powerautomate.com
 DOMAIN-SUFFIX,powerbi.com
 DOMAIN-SUFFIX,powershellgallery.com
 DOMAIN-SUFFIX,renovacionoffice.com
-DOMAIN-SUFFIX,renovacionxboxlive.com
 DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,s-msedge.net
 DOMAIN-SUFFIX,sfbassets.com
@@ -184,12 +181,6 @@ DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,windowsazure.com
 DOMAIN-SUFFIX,windowsupdate.com
 DOMAIN-SUFFIX,wunderlist.com
-DOMAIN-SUFFIX,xbox.com
-DOMAIN-SUFFIX,xbox360.com
-DOMAIN-SUFFIX,xboxgamepass.com
-DOMAIN-SUFFIX,xboxlive.com
-DOMAIN-SUFFIX,xboxone.com
-DOMAIN-SUFFIX,xboxservices.com
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN-KEYWORD,microsoft
