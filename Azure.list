@@ -1,0 +1,62 @@
+# NAME: Azure
+# AUTHOR: guliaev/Rules
+# SOURCE: https://github.com/blackmatrix7/ios_rule_script + https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-domains
+# Дата обновления: 2026-03-14
+# Примечание: домены Azure вынесены из Microsoft.list
+
+# --- Основные Azure домены ---
+DOMAIN-SUFFIX,azure
+DOMAIN-SUFFIX,azure.com
+DOMAIN-SUFFIX,azure.net
+DOMAIN-SUFFIX,azure-api.cn
+DOMAIN-SUFFIX,azure-apihub.cn
+DOMAIN-SUFFIX,azure-apim.net
+DOMAIN-SUFFIX,azure-automation.cn
+DOMAIN-SUFFIX,azure-devices.cn
+DOMAIN-SUFFIX,azure-devices.net
+DOMAIN-SUFFIX,azure-dns.com
+DOMAIN-SUFFIX,azure-mobile.net
+
+# --- Azure CDN / Front Door ---
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,azurefd.net
+DOMAIN-SUFFIX,azurecomcdn.net
+
+# --- Azure PaaS сервисы ---
+DOMAIN-SUFFIX,azurewebsites.net
+DOMAIN-SUFFIX,azurecomm.net
+DOMAIN-SUFFIX,azurecontainer.io
+DOMAIN-SUFFIX,azurecosmosdb.com
+DOMAIN-SUFFIX,azurecr.cn
+DOMAIN-SUFFIX,azuredatabricks.net
+DOMAIN-SUFFIX,azureiotcentral.com
+DOMAIN-SUFFIX,azureiotsolutions.com
+DOMAIN-SUFFIX,azurerms.com
+DOMAIN-SUFFIX,azureappservice.net
+
+# --- Azure Storage / Windows.net ---
+DOMAIN-SUFFIX,windows.net
+DOMAIN-SUFFIX,core.windows.net
+DOMAIN-SUFFIX,database.windows.net
+DOMAIN-SUFFIX,servicebus.windows.net
+DOMAIN-SUFFIX,blob.core.windows.net
+DOMAIN-SUFFIX,table.core.windows.net
+DOMAIN-SUFFIX,queue.core.windows.net
+DOMAIN-SUFFIX,file.core.windows.net
+
+# --- Azure Key Vault / Cosmos ---
+DOMAIN-SUFFIX,vault.azure.net
+DOMAIN-SUFFIX,documents.azure.com
+DOMAIN-SUFFIX,cosmos.azure.com
+
+# --- Azure Китай (21Vianet) ---
+DOMAIN-SUFFIX,21vbc.com
+DOMAIN-SUFFIX,21vbluecloud.com
+DOMAIN-SUFFIX,21vbluecloud.net
+DOMAIN-SUFFIX,azcrmc-test.cn
+DOMAIN-SUFFIX,azcrmc.cn
+DOMAIN-SUFFIX,azk8s.cn
+DOMAIN-SUFFIX,aznbcontent.cn
+DOMAIN-SUFFIX,aztask.cn
+DOMAIN-SUFFIX,appserviceenvironment.cn
+DOMAIN-SUFFIX,apihub-internal.cn
