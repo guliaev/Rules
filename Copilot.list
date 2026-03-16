@@ -5,10 +5,13 @@
 # Общие Microsoft-домены вынесены в Microsoft.list.
 # Дата обновления: 2026-03-14
 
-# --- Новый домен cloud.microsoft (требует PROXY) ---
+# --- Другие домены Microsoft (требует PROXY) ---
 DOMAIN-SUFFIX,cloud.microsoft
 DOMAIN-SUFFIX,static.microsoft
 DOMAIN-SUFFIX,usercontent.microsoft
+DOMAIN-SUFFIX,ecs.office.com
+DOMAIN-SUFFIX,designer.microsoft.com
+DOMAIN-SUFFIX,stride.microsoft.com
 
 # --- Уникальные Copilot домены ---
 DOMAIN,copilot.cloud.microsoft
