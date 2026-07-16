@@ -14,5 +14,6 @@ DOMAIN-SUFFIX,platform.anthropic.com
 DOMAIN-SUFFIX,platform.claude.com
 DOMAIN-SUFFIX,support.anthropic.com
 DOMAIN-SUFFIX,support.claude.com
+DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,www-cdn.anthropic.com
 DOMAIN,cdn.usefathom.com
