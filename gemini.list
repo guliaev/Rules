@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,alkalicore-pa.clients6.google.com
 DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,alkalimakersuite.clients6.google.com
 DOMAIN-SUFFIX,webchannel-alkalimakersuite-pa.clients6.google.com
 DOMAIN-SUFFIX,clients4.google.com
 DOMAIN-SUFFIX,generativeai.google
@@ -22,6 +23,8 @@ DOMAIN-SUFFIX,jules.google.com
 DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
 DOMAIN-SUFFIX,antigravity-unleash.goog
 DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,ai.google
+DOMAIN-SUFFIX,labs.google
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
