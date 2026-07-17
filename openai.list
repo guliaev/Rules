@@ -29,7 +29,7 @@ DOMAIN-KEYWORD,openaicom-api
 DOMAIN-KEYWORD,chatgpt-async-webps-prod-
 
 # --- Authentication and security ---
-DOMAIN,openai-api.arkoselabs.com
+DOMAIN-SUFFIX,openai-api.arkoselabs.com
 DOMAIN,client-api.arkoselabs.com
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,ct.sendgrid.net
