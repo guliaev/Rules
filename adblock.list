@@ -4,6 +4,11 @@
 # Дедупликация: точные дубли и поддомены, покрытые более широким DOMAIN-SUFFIX, удалены.
 # Подключать: RULE-SET,...,REJECT ПОСЛЕ Apple.list,DIRECT.
 
+# Исключения 2026-07-19: убраны smtp.mail.ru, zen.yandex.ru, pp.ru (вся зона), ahcdn.com,
+# fastpic.ru — конфликтовали с сознательными DIRECT/прокси-правилами sr_ru_extended.conf.
+# Вместо широкого pp.ru возвращён точечный рекламный поддомен:
+DOMAIN-SUFFIX,nsdic.pp.ru
+
 # ===== Локальные курируемые правила (бывший block.list) — 52 правил =====
 URL-REGEX,^https?://a.applovin.com/.+/ad
 URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+&oad
@@ -9176,7 +9181,6 @@ DOMAIN-SUFFIX,ah-ha.com
 DOMAIN-SUFFIX,ah.yimg.jp
 DOMAIN-SUFFIX,ahalogy.com
 DOMAIN-SUFFIX,ahashpool.com
-DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,ahcnxuepput.com
 DOMAIN-SUFFIX,aheadday.com
 DOMAIN-SUFFIX,ahfmyeuwlhp.bid
@@ -73304,7 +73308,6 @@ DOMAIN-SUFFIX,fastonlinebuy.ru
 DOMAIN-SUFFIX,fastpays.ru
 DOMAIN-SUFFIX,fastpereezd.ru
 DOMAIN-SUFFIX,fastpharmmarket.ru
-DOMAIN-SUFFIX,fastpic.ru
 DOMAIN-SUFFIX,fastpillsstore.ru
 DOMAIN-SUFFIX,fastpillswebmart.ru
 DOMAIN-SUFFIX,fastsafeoutlet.ru
@@ -78073,7 +78076,6 @@ DOMAIN-SUFFIX,pozdrawleniya.ru
 DOMAIN-SUFFIX,pozhbez01.ru
 DOMAIN-SUFFIX,pp-ger-de.germanger-verifyanfrage.ru
 DOMAIN-SUFFIX,pp-panda74.ru
-DOMAIN-SUFFIX,pp.ru
 DOMAIN-SUFFIX,ppppbra.jelastic.regruhosting.ru
 DOMAIN-SUFFIX,ppublcontricopyright.ru
 DOMAIN-SUFFIX,pr-gaz.ru
@@ -79456,7 +79458,6 @@ DOMAIN-SUFFIX,smstraf.ru
 DOMAIN-SUFFIX,smsvcash.ru
 DOMAIN-SUFFIX,smt4.ru
 DOMAIN-SUFFIX,smtp-host.smtp.ru
-DOMAIN-SUFFIX,smtp.mail.ru
 DOMAIN-SUFFIX,smtp.user-gto.ru
 DOMAIN-SUFFIX,smweb.ru
 DOMAIN-SUFFIX,sneakermall.ru
@@ -81945,7 +81946,6 @@ DOMAIN-SUFFIX,zeleny-sad37.ru
 DOMAIN-SUFFIX,zeleznobeton.ru
 DOMAIN-SUFFIX,zem-m7.ru
 DOMAIN-SUFFIX,zen-test.yandex.ru
-DOMAIN-SUFFIX,zen.yandex.ru
 DOMAIN-SUFFIX,zenbillis.ru
 DOMAIN-SUFFIX,zenblueeds.ru
 DOMAIN-SUFFIX,zenit-izhevsk.ru
