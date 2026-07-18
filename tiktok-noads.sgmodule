@@ -1,10 +1,10 @@
-#!name=TikTok NoAds — экспериментальный фильтр ленты
-#!desc=Удаляет только элементы ленты с явным флагом is_ads. Не меняет регион, аккаунт, загрузки и водяные знаки. Требуется HTTPS-дешифрование.
+#!name=TikTok NoAds — экспериментальный фильтр ленты v2
+#!desc=Удаляет элементы рекламы из ответов ленты TikTok на региональных API .com, .eu и .us. Не меняет регион, аккаунт, загрузки и водяные знаки. Требуется HTTPS-дешифрование.
 #!author=guliaev/Rules
 #!homepage=https://github.com/guliaev/Rules
 
 [Script]
-tiktok-noads-feed = type=http-response, pattern=^https?:\/\/api[^/]*\.tiktokv\.com\/aweme\/v[0-9]+\/feed\/, requires-body=true, max-size=0, timeout=10, script-path=https://raw.githubusercontent.com/guliaev/Rules/main/tiktok-noads.js
+tiktok-noads-feed = type=http-response, pattern=^https?:\/\/api[^/]*\.tiktokv\.(com|eu|us)\/(aweme|tiktok)\/v[0-9]+\/feed\/, requires-body=true, max-size=0, timeout=10, script-path=https://raw.githubusercontent.com/guliaev/Rules/main/tiktok-noads.js
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com
+hostname = %APPEND% *.tiktokv.com, *.tiktokv.eu, *.tiktokv.us
