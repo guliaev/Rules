@@ -8,6 +8,8 @@
 # fastpic.ru — конфликтовали с сознательными DIRECT/прокси-правилами sr_ru_extended.conf.
 # Вместо широкого pp.ru возвращён точечный рекламный поддомен:
 DOMAIN-SUFFIX,nsdic.pp.ru
+# Решения 2026-07-19: extmaps-api.yandex.net исключён (функциональный API Яндекс Карт);
+# широкий byteoversea.com сужен до log.byteoversea.com, чтобы не ломать TikTok (tiktok.list).
 
 # ===== Локальные курируемые правила (бывший block.list) — 52 правил =====
 URL-REGEX,^https?://a.applovin.com/.+/ad
@@ -35,7 +37,6 @@ DOMAIN-SUFFIX,data.mistat.india.xiaomi.com
 DOMAIN-SUFFIX,data.mistat.rus.xiaomi.com
 DOMAIN-SUFFIX,analytics.pointdrive.linkedin.com
 DOMAIN-SUFFIX,tracking.rus.miui.com
-DOMAIN-SUFFIX,extmaps-api.yandex.net
 DOMAIN-SUFFIX,appmetrica.yandex.ru
 DOMAIN-SUFFIX,pixel.facebook.com
 DOMAIN-SUFFIX,an.facebook.com
@@ -15433,7 +15434,7 @@ DOMAIN-SUFFIX,bytecenter.com
 DOMAIN-SUFFIX,bytecoin.cloud
 DOMAIN-SUFFIX,bytedance.com
 DOMAIN-SUFFIX,bytemgdd.com
-DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,log.byteoversea.com
 DOMAIN-SUFFIX,byu.qualtrics.com
 DOMAIN-SUFFIX,byufpbvjpedvpx.com
 DOMAIN-SUFFIX,byui.qualtrics.com
