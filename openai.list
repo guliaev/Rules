@@ -26,6 +26,7 @@ DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,openaiassets.blob.core.windows.net
 DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,openai-api.arkoselabs.com
 DOMAIN,openaicom.imgix.net
 DOMAIN-KEYWORD,openaicom-api
 DOMAIN-KEYWORD,chatgpt-async-webps-prod-
