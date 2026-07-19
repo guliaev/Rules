@@ -10,6 +10,8 @@
 DOMAIN-SUFFIX,nsdic.pp.ru
 # Решения 2026-07-19: extmaps-api.yandex.net исключён (функциональный API Яндекс Карт);
 # широкий byteoversea.com сужен до log.byteoversea.com, чтобы не ломать TikTok (tiktok.list).
+# 2026-07-19: 16 реальных Apple-доменов перенесены в Apple-Privacy-Block.list (единое место).
+# Здесь оставлены только фишинг-двойники и не-Apple хосты со строкой apple/cloud в имени.
 
 # ===== Локальные курируемые правила (бывший block.list) — 52 правил =====
 URL-REGEX,^https?://a.applovin.com/.+/ad
@@ -8280,7 +8282,6 @@ DOMAIN-SUFFIX,advertising.amazon.in
 DOMAIN-SUFFIX,advertising.aol.co.uk
 DOMAIN-SUFFIX,advertising.aol.com
 DOMAIN-SUFFIX,advertising.apartmenttherapy.com
-DOMAIN-SUFFIX,advertising.apple.com
 DOMAIN-SUFFIX,advertising.autotrader.co.uk
 DOMAIN-SUFFIX,advertising.bayoubuzz.com
 DOMAIN-SUFFIX,advertising.bbcworldwide.com
@@ -11835,7 +11836,6 @@ DOMAIN-SUFFIX,autohipnose.com
 DOMAIN-SUFFIX,autohits.dk
 DOMAIN-SUFFIX,autoid.com
 DOMAIN-SUFFIX,autoline-top.com
-DOMAIN-SUFFIX,autolinkmaker.itunes.apple.com
 DOMAIN-SUFFIX,autologica.ga
 DOMAIN-SUFFIX,automatad.com
 DOMAIN-SUFFIX,automatedtraffic.com
@@ -12766,7 +12766,6 @@ DOMAIN-SUFFIX,banners.interq.or.jp
 DOMAIN-SUFFIX,banners.iop.org
 DOMAIN-SUFFIX,banners.iq.pl
 DOMAIN-SUFFIX,banners.isoftmarketing.com
-DOMAIN-SUFFIX,banners.itunes.apple.com
 DOMAIN-SUFFIX,banners.itweb.co.za
 DOMAIN-SUFFIX,banners.ix.se
 DOMAIN-SUFFIX,banners.ixitools.com
@@ -15497,7 +15496,6 @@ DOMAIN-SUFFIX,c.adxfactory.com
 DOMAIN-SUFFIX,c.afftrx.com
 DOMAIN-SUFFIX,c.anytrx.com
 DOMAIN-SUFFIX,c.aol.com
-DOMAIN-SUFFIX,c.apple.com
 DOMAIN-SUFFIX,c.ar.msn.com
 DOMAIN-SUFFIX,c.at.msn.com
 DOMAIN-SUFFIX,c.be.msn.com
@@ -19597,7 +19595,6 @@ DOMAIN-SUFFIX,cssak.mmtcdn.com
 DOMAIN-SUFFIX,csshtlak.mmtcdn.com
 DOMAIN-SUFFIX,cssrvsync.com
 DOMAIN-SUFFIX,csstatic.com
-DOMAIN-SUFFIX,cstat.apple.com
 DOMAIN-SUFFIX,cstdfxkxbqbc.com
 DOMAIN-SUFFIX,cstfzgckbtrb.com
 DOMAIN-SUFFIX,cstraffic.com
@@ -30651,10 +30648,8 @@ DOMAIN-SUFFIX,iadctest.qwapi.com
 DOMAIN-SUFFIX,iadfeed.qwapi.com
 DOMAIN-SUFFIX,iadfeedtest.qwapi.com
 DOMAIN-SUFFIX,iadfjbrttvgn.com
-DOMAIN-SUFFIX,iadmoo.apple.com
 DOMAIN-SUFFIX,iadnet.com
 DOMAIN-SUFFIX,iads.com.np
-DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,iadv.biz
 DOMAIN-SUFFIX,iadvert.net
 DOMAIN-SUFFIX,iadvize.com
@@ -31059,7 +31054,6 @@ DOMAIN-SUFFIX,idewan.com
 DOMAIN-SUFFIX,idexoro.info
 DOMAIN-SUFFIX,idfybbol.com
 DOMAIN-SUFFIX,idg.dmdelivery.com
-DOMAIN-SUFFIX,idiagnostics.apple.com
 DOMAIN-SUFFIX,idigger.qtmojo.com
 DOMAIN-SUFFIX,idio.co
 DOMAIN-SUFFIX,idioticxellutv.download
@@ -38674,7 +38668,6 @@ DOMAIN-SUFFIX,metricology.com
 DOMAIN-SUFFIX,metrics-api.dimensions.ai
 DOMAIN-SUFFIX,metrics-api.librato.com
 DOMAIN-SUFFIX,metrics-cbslocal-com.cdn.ampproject.org
-DOMAIN-SUFFIX,metrics-config.icloud.com
 DOMAIN-SUFFIX,metrics.aarp.org
 DOMAIN-SUFFIX,metrics.accuweather.com
 DOMAIN-SUFFIX,metrics.acehardware.com
@@ -38688,7 +38681,6 @@ DOMAIN-SUFFIX,metrics.americancityandcounty.com
 DOMAIN-SUFFIX,metrics.apartmentfinder.com
 DOMAIN-SUFFIX,metrics.apartments.com
 DOMAIN-SUFFIX,metrics.api.drift.com
-DOMAIN-SUFFIX,metrics.apple.com
 DOMAIN-SUFFIX,metrics.ariba.com
 DOMAIN-SUFFIX,metrics.articulate.com
 DOMAIN-SUFFIX,metrics.att.com
@@ -38812,7 +38804,6 @@ DOMAIN-SUFFIX,metrics.moneymart.ca
 DOMAIN-SUFFIX,metrics.more.com
 DOMAIN-SUFFIX,metrics.mozilla.com
 DOMAIN-SUFFIX,metrics.mysanantonio.com
-DOMAIN-SUFFIX,metrics.mzstatic.com
 DOMAIN-SUFFIX,metrics.n-tv.de
 DOMAIN-SUFFIX,metrics.natmags.co.uk
 DOMAIN-SUFFIX,metrics.nba.com
@@ -42083,7 +42074,6 @@ DOMAIN-SUFFIX,note.mobileapphelper.com
 DOMAIN-SUFFIX,note.scloud.letv.com
 DOMAIN-SUFFIX,notebookservisru.161.com1.ru
 DOMAIN-SUFFIX,notenpartner.de
-DOMAIN-SUFFIX,notes-analytics-events.apple.com
 DOMAIN-SUFFIX,noteupgrade.themainplacesetnowforcontentsgo.win
 DOMAIN-SUFFIX,nothering.com
 DOMAIN-SUFFIX,nothing-but-value.com
@@ -48537,7 +48527,6 @@ DOMAIN-SUFFIX,qvsogqqd.com
 DOMAIN-SUFFIX,qvsshkcr.com
 DOMAIN-SUFFIX,qvvxyuuyinxp.com
 DOMAIN-SUFFIX,qvxgghoisvifyu.bid
-DOMAIN-SUFFIX,qwapi.apple.com
 DOMAIN-SUFFIX,qwbnzilogwdc.com
 DOMAIN-SUFFIX,qwe.qrrgv.space
 DOMAIN-SUFFIX,qwebirc.swiftirc.net
@@ -51848,7 +51837,6 @@ DOMAIN-SUFFIX,secureintl.com
 DOMAIN-SUFFIX,securejoinsite.com
 DOMAIN-SUFFIX,securejump.net
 DOMAIN-SUFFIX,securelogin4.funnyjunk.com
-DOMAIN-SUFFIX,securemetrics.apple.com
 DOMAIN-SUFFIX,securemypc.co.uk
 DOMAIN-SUFFIX,securep2p.com
 DOMAIN-SUFFIX,securepaths.com
@@ -54870,7 +54858,6 @@ DOMAIN-SUFFIX,stats.ft.com
 DOMAIN-SUFFIX,stats.gamestop.com
 DOMAIN-SUFFIX,stats.gammacash.com
 DOMAIN-SUFFIX,stats.gbvanalytics.com
-DOMAIN-SUFFIX,stats.gc.apple.com
 DOMAIN-SUFFIX,stats.geegain.com
 DOMAIN-SUFFIX,stats.gifs.com
 DOMAIN-SUFFIX,stats.gioneemobile.net
@@ -55246,7 +55233,6 @@ DOMAIN-SUFFIX,stnvgvtwzzrh.com
 DOMAIN-SUFFIX,stoagergu.com
 DOMAIN-SUFFIX,stock.daydreamfuze.com
 DOMAIN-SUFFIX,stocker.bonnint.net
-DOMAIN-SUFFIX,stocks-analytics-events.apple.com
 DOMAIN-SUFFIX,stoiximan.gr
 DOMAIN-SUFFIX,stompebi.link
 DOMAIN-SUFFIX,stoneb.cn
