@@ -1,51 +1,48 @@
 # Точечная блокировка рекламы и аналитики Apple для Shadowrocket.
-# Проверено: 2026-07-18.
+# Проверено: 2026-07-18. Обновлено: 2026-07-19.
 # Подключать с REJECT непосредственно ПЕРЕД Apple.list,DIRECT.
-# Все 29 Apple-доменов из проверенных блок-листов учтены ниже.
+# Единственное место с Apple-правилами блокировки (в adblock.list их больше нет).
 
 # --- Реклама, iAd и атрибуция: активно ---
 DOMAIN-SUFFIX,api-adservices.apple.com
 DOMAIN-SUFFIX,advertising.apple.com
 DOMAIN-SUFFIX,iad.apple.com
 DOMAIN-SUFFIX,iadmoo.apple.com
-DOMAIN-SUFFIX,iadsdk.apple.com
 
-# DOMAIN-SUFFIX,iadsdk.apple.com уже покрывает все узкие дубли из сторонних списков:
-# DOMAIN,ca.iadsdk.apple.com
-# DOMAIN,cf.iadsdk.apple.com
-# DOMAIN,cs.iadsdk.apple.com
-# DOMAIN,news.iadsdk.apple.com
-# DOMAIN,su.iadsdk.apple.com
-# DOMAIN,tr.iadsdk.apple.com
-# DOMAIN,ut.iadsdk.apple.com
+# --- iAd SDK: явные конечные точки (заменяют широкий iadsdk.apple.com) ---
+# Возвращены 7 точечных хостов из исходных списков; широкий DOMAIN-SUFFIX,iadsdk.apple.com удалён.
+DOMAIN,ca.iadsdk.apple.com
+DOMAIN,cf.iadsdk.apple.com
+DOMAIN,cs.iadsdk.apple.com
+DOMAIN,news.iadsdk.apple.com
+DOMAIN,su.iadsdk.apple.com
+DOMAIN,tr.iadsdk.apple.com
+DOMAIN,ut.iadsdk.apple.com
 
 # --- Сторонняя аналитика: активно ---
 DOMAIN,apple.comscoreresearch.com
 
-# --- Событийная аналитика приложений Apple: активно, средняя уверенность ---
+# --- Событийная аналитика приложений Apple: активно ---
 DOMAIN-SUFFIX,weather-analytics-events.apple.com
 DOMAIN-SUFFIX,notes-analytics-events.apple.com
 DOMAIN-SUFFIX,books-analytics-events.apple.com
 DOMAIN-SUFFIX,stocks-analytics-events.apple.com
 
-# --- Возможная телеметрия: сохранена, но отключена ---
-# Эти хосты недостаточно отделены от диагностики и служебных функций.
-# DOMAIN-SUFFIX,cstat.apple.com
-# DOMAIN-SUFFIX,idiagnostics.apple.com
-# DOMAIN-SUFFIX,metrics-config.icloud.com
-# DOMAIN-SUFFIX,metrics.apple.com
-# DOMAIN-SUFFIX,securemetrics.apple.com
+# --- Возможная телеметрия: сохранена, но ОТКЛЮЧЕНА (плохо отделена от диагностики) ---
+# DOMAIN-SUFFIX,cstat.apple.com — статистика клиента Apple; смешана со служебной диагностикой устройства
+# DOMAIN-SUFFIX,idiagnostics.apple.com — система диагностики iOS; блок может ломать отчёты и сервис-функции
+# DOMAIN-SUFFIX,metrics-config.icloud.com — конфигурация сбора метрик iCloud; идёт вместе со служебными вызовами
+# DOMAIN-SUFFIX,metrics.apple.com — общий сбор метрик Apple; не отделён от диагностики
+# DOMAIN-SUFFIX,securemetrics.apple.com — защищённый канал метрик; риск задеть служебные функции
 
-# --- Критичные или неоднозначные хосты: отключены ---
-# Не раскомментировывать без отдельного теста App Store, iCloud, «Игр» и Game Center.
-# DOMAIN-SUFFIX,metrics.icloud.com
-# DOMAIN-SUFFIX,metrics.mzstatic.com
-# DOMAIN-SUFFIX,stats.gc.apple.com
-# DOMAIN-SUFFIX,c.apple.com
-# DOMAIN-SUFFIX,qwapi.apple.com
+# --- Критичные хосты: ОТКЛЮЧЕНЫ (блокировка ломает сервисы Apple) ---
+# DOMAIN-SUFFIX,metrics.icloud.com — iCloud Diagnostics; Apple внёс в обязательный список (2026), блок ломает iCloud
+# DOMAIN-SUFFIX,metrics.mzstatic.com — CDN App Store и контента; блок ломает загрузку приложений, книг, картинок
+# DOMAIN-SUFFIX,stats.gc.apple.com — Game Center; блок ломает достижения и игры (также разрешён в Apple.list DIRECT)
+# DOMAIN-SUFFIX,c.apple.com — служебный хост Apple; назначение неоднозначно, риск поломки сервисов
+# DOMAIN-SUFFIX,qwapi.apple.com — старый поисковый API iTunes; блок может задеть iTunes-функции
 
-# --- Функциональные iTunes-хосты из старых блок-листов: отключены ---
-# Их блокировка может ломать баннеры, виджеты и старые iTunes-ссылки.
-# DOMAIN-SUFFIX,autolinkmaker.itunes.apple.com
-# DOMAIN-SUFFIX,banners.itunes.apple.com
-# DOMAIN-SUFFIX,widgets.itunes.apple.com
+# --- Функциональные iTunes-хосты: ОТКЛЮЧЕНЫ (ломают баннеры, виджеты, ссылки) ---
+# DOMAIN-SUFFIX,autolinkmaker.itunes.apple.com — генератор партнёрских iTunes-ссылок; блок ломает автоссылки
+# DOMAIN-SUFFIX,banners.itunes.apple.com — iTunes-баннеры магазина; блок ломает баннеры
+# DOMAIN-SUFFIX,widgets.itunes.apple.com — iTunes-виджеты и превью; блок ломает виджеты
