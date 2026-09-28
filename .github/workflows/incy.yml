@@ -1,0 +1,85 @@
+name: INCY — сборка профилей и геофайлов
+
+# Пересобирает профили INCY из sr_ru_extended.conf:
+#  * при изменении конфига, списков или компилятора;
+#  * раз в сутки — чтобы подтянуть обновления внешних списков (re:filter, antifilter, реклама);
+#  * вручную: Actions → «INCY — сборка…» → Run workflow.
+# Геофайлы публикуются в ветку incy-dist, профили — в incy/ ветки main.
+# Full Xray Config (ключи серверов) уходит только в секретный Gist, в репозиторий не попадает.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - sr_ru_extended.conf
+      - "*.list"
+      - tools/sr2incy.py
+      - .github/workflows/incy.yml
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: incy-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Компиляция Shadowrocket → INCY
+        env:
+          SUB_URLS: ${{ secrets.SUB_URLS }}
+          LOCAL_SERVERS: ${{ secrets.LOCAL_SERVERS }}
+        run: |
+          if [ -n "$SUB_URLS" ]; then
+            python3 tools/sr2incy.py --full
+          else
+            python3 tools/sr2incy.py
+          fi
+
+      - name: Full Xray Config → секретный Gist
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+        run: |
+          if [ -z "$GIST_TOKEN" ] || [ -z "$GIST_ID" ] || [ ! -f dist/incy_full.json ]; then
+            echo "Gist не настроен — шаг пропущен"; exit 0
+          fi
+          python3 - <<'PY'
+          import json, os, urllib.request
+          body = json.dumps({"files": {"incy_full.json": {"content": open("dist/incy_full.json", encoding="utf-8").read()}}}).encode()
+          req = urllib.request.Request("https://api.github.com/gists/" + os.environ["GIST_ID"], data=body, method="PATCH",
+                                       headers={"Authorization": "Bearer " + os.environ["GIST_TOKEN"],
+                                                "Accept": "application/vnd.github+json"})
+          urllib.request.urlopen(req, timeout=60).read()
+          print("Gist обновлён")
+          PY
+
+      - name: Геофайлы → ветка incy-dist
+        run: |
+          cd dist
+          git init -q -b incy-dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add geosite.dat geosite.dat.sha256 geoip.dat geoip.dat.sha256
+          git commit -q -m "INCY geo $(date -u +%F)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" incy-dist
+
+      - name: Профили → main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add incy/
+          if git diff --cached --quiet; then echo "Профили не изменились"; exit 0; fi
+          git commit -q -m "INCY: пересборка профилей $(date -u +%F)"
+          git push -q
