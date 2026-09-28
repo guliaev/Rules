@@ -1,0 +1,60 @@
+#!name=Guliaev Rules — дополнения для INCY
+#!desc=Правила из sr_ru_extended.conf, которые не помещаются в профиль маршрутизации: USER-AGENT, PROCESS-NAME, порты, URL Rewrite и URL-REGEX блокировки
+#!author=guliaev
+
+[Rule]
+USER-AGENT,%E5%9C%B0%E5%9B%BE*,DIRECT
+USER-AGENT,%E8%AE%BE%E7%BD%AE*,DIRECT
+USER-AGENT,*com.apple.mobileme.fmip1,DIRECT
+USER-AGENT,*WeatherFoundation*,DIRECT
+USER-AGENT,*AssistantServices*,DIRECT
+USER-AGENT,MobileAsset*,DIRECT
+USER-AGENT,Siri*,DIRECT
+USER-AGENT,cloudd*,DIRECT
+USER-AGENT,com.apple.appstored*,DIRECT
+USER-AGENT,com.apple.geod*,DIRECT
+USER-AGENT,com.apple.Maps*,DIRECT
+USER-AGENT,FindMyFriends*,DIRECT
+USER-AGENT,FindMyiPhone*,DIRECT
+USER-AGENT,FMDClient*,DIRECT
+USER-AGENT,FMFD*,DIRECT
+USER-AGENT,fmflocatord*,DIRECT
+USER-AGENT,geod*,DIRECT
+USER-AGENT,locationd*,DIRECT
+USER-AGENT,Maps*,DIRECT
+USER-AGENT,Music*,DIRECT
+USER-AGENT,AppleNews*,DIRECT
+USER-AGENT,com.apple.news*,DIRECT
+USER-AGENT,com.apple.trustd*,DIRECT
+USER-AGENT,AppleTV*,DIRECT
+USER-AGENT,com.apple.tv*,DIRECT
+PROCESS-NAME,storedownloadd,DIRECT
+PROCESS-NAME,com.apple.geod,DIRECT
+PROCESS-NAME,Music,DIRECT
+PROCESS-NAME,News,DIRECT
+PROCESS-NAME,LookupViewService,DIRECT
+PROCESS-NAME,TV,DIRECT
+USER-AGENT,TikTok*,PROXY
+USER-AGENT,Claude*,PROXY
+USER-AGENT,Microsoft*,DIRECT
+PROCESS-NAME,OneDrive,DIRECT
+PROCESS-NAME,OneDriveUpdater,DIRECT
+USER-AGENT,OneDrive*,DIRECT
+USER-AGENT,OneDriveiOSApp*,DIRECT
+RULE-SET,https://raw.githubusercontent.com/helmiau/clashrules/refs/heads/main/shadowrocket/Game_Discord_Ports.list,PROXY
+
+[URL Rewrite]
+^https?://(www.)?yandex.ru https://www.ya.ru 302
+^https?://(www.)?google.ru https://www.google.com 302
+^https?://(www.)?nnmclub.to https://nnmclub.to 302
+^https?://a.applovin.com/.+/ad - reject
+^https?:\/\/.+\.googlevideo\.com\/.+&oad - reject
+^https?:\/\/.+\.googlevideo\.com\/.+ctier - reject
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_ - reject
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_ - reject
+^https?:\/\/.+\.youtube\.com\/get_midroll_ - reject
+^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite - reject
+^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat - reject
+
+[MITM]
+hostname = %APPEND% yandex.ru, www.yandex.ru, google.ru, www.google.ru, a.applovin.com, *.googlevideo.com, youtubei.googleapis.com, *.youtube.com, premiumyva.appspot.com
