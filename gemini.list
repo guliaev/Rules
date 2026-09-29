@@ -14,9 +14,15 @@ DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,gemini.google
 DOMAIN-SUFFIX,gemini.google.com
+DOMAIN,gemini.gstatic.com
+DOMAIN,geminiweb-pa.clients.google.com
+DOMAIN,geminiweb-pa.clients6.google.com
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN,notebook.google.com
+DOMAIN,notebook.google
+DOMAIN,notebooklm.googleapis.com
+DOMAIN,labstailwind.pa.googleapis.com
 DOMAIN-SUFFIX,notebooklm-pa.googleapis.com
 DOMAIN-SUFFIX,jules.google
 DOMAIN-SUFFIX,jules.google.com
