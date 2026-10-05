@@ -32,3 +32,9 @@ DOMAIN,cloudcode-pa.googleapis.com
 DOMAIN,daily-cloudcode-pa.googleapis.com
 DOMAIN-SUFFIX,antigravity-unleash.goog
 DOMAIN-SUFFIX,ai.google
+
+# Separate Gemini test domains from DNS capture (2026-10-05)
+# Keep this block isolated for individual Gemini routing tests.
+DOMAIN,lh3.googleusercontent.com
+DOMAIN,oauthaccountmanager.googleapis.com
+DOMAIN,oauth2.googleapis.com
