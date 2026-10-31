@@ -38,3 +38,7 @@ DOMAIN-SUFFIX,ai.google
 DOMAIN,lh3.googleusercontent.com
 DOMAIN,oauthaccountmanager.googleapis.com
 DOMAIN,oauth2.googleapis.com
+
+# iOS Gemini app connectivity
+DOMAIN-SUFFIX,firebaseinstallations.googleapis.com
+DOMAIN-SUFFIX,notifications-pa.googleapis.com
